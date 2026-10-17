@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>漫畫收藏 → Obsidian · 2.6</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f1fa;color:#252134;font:16px/1.6 system-ui,sans-serif}main{max-width:1020px;margin:40px auto;padding:24px}h1{margin:0;font-size:30px}p{color:#666074}section{background:white;border:1px solid #e2ddee;border-radius:18px;padding:24px;margin:20px 0}button{border:0;border-radius:9px;background:#6950bd;color:white;padding:12px 18px;cursor:pointer;font:inherit}button.secondary{background:#eee9f8;color:#493b6c}button:disabled{opacity:.5;cursor:wait}input{display:block;width:100%;padding:12px;border:1px solid #cdc5dc;border-radius:8px;font:inherit;margin:6px 0 18px}label{font-weight:600}#status{white-space:pre-wrap;color:#4b397d}#list{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}.card{border:1px solid #e2ddee;border-radius:12px;padding:16px;overflow-wrap:anywhere}.card h3{margin:0}.card button{padding:5px 12px;margin-top:12px}small{color:#746b82}.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}#preview{max-height:180px;max-width:160px;border-radius:8px;margin-bottom:12px} [hidden]{display:none!important}
+#tagChoices{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 20px}#tagChoices button{padding:6px 13px;border:1px solid #d8cfee;border-radius:20px;background:#eee9f8;color:#493b6c}#tagChoices button[aria-pressed="true"]{background:#6950bd;color:white;border-color:#6950bd}#tagChoices button:focus-visible{outline:3px solid #ad94ec;outline-offset:2px}#dropZone{border:2px dashed #b3a1d8;border-radius:12px;padding:24px;text-align:center;background:#faf8ff;margin:10px 0;cursor:pointer}#dropZone.dragging{background:#e6dcff;border-color:#6950bd}#dropZone:focus-visible{outline:3px solid #ad94ec}#dropZone{min-height:180px;display:flex;flex-direction:column;justify-content:center}body.draggingPage{outline:5px solid #9a7be0;outline-offset:-5px}#pageDropHint{position:fixed;inset:16px;z-index:1000;border:4px dashed #9675da;border-radius:24px;background:#f2ebffed;display:grid;place-items:center;pointer-events:none;font-size:28px;color:#583d91;text-align:center}.manageRow{display:flex;gap:8px;align-items:center;border-bottom:1px solid #eee;padding:10px 0;flex-wrap:wrap}.manageRow input{flex:1;min-width:150px;margin:0}.manageRow small{min-width:80px}.manageRow button{padding:7px 12px}button.danger{background:#fbe8ed;color:#a63350}summary{cursor:pointer;font-weight:600}#manageSearch{margin-top:16px}#tagSuggestions{display:flex;gap:8px;flex-wrap:wrap;padding:12px;background:#f6f1ff;border:1px solid #d8caef;border-radius:10px;margin:-8px 0 14px}#tagSuggestions button{padding:7px 12px;background:white;color:#493b6c;border:1px solid #d8caef}#tagSuggestions button[aria-selected="true"]{background:#6950bd;color:white}#dropFeedback{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:2000;max-width:min(92vw,720px);padding:16px 22px;border-radius:12px;background:#49346d;color:white;box-shadow:0 5px 22px #0003;white-space:pre-wrap;pointer-events:none}</style>
+<main><h1>漫畫收藏 → Obsidian <small>2.6</small></h1><p>填入封面、連結與 tag，自動整理成可互相連結的筆記。</p>
+<section><div class="row"><button id="choose">選擇 Obsidian 筆記庫</button><button id="reconnectVault" class="secondary" hidden>重新連接上次的筆記庫</button><strong id="vault">尚未選擇</strong></div><p id="vaultRememberHint">選擇一次筆記庫後，本程式會在這台電腦記住它。之後可直接重新連接，也能隨時改選其他資料夾。</p><small>請選擇包含 .obsidian 的筆記庫根目錄。資料儲存在「漫畫收藏工具」子資料夾，不會修改其他筆記。</small></section>
+<section><h2 id="heading">新增漫畫</h2><form id="form"><label>漫畫名稱<input id="title" required maxlength="200" placeholder="例如：葬送的芙莉蓮"></label><label>漫畫連結<input id="url" type="url" required placeholder="https://…"></label><label>Tag<input id="tags" role="combobox" aria-autocomplete="list" aria-controls="tagSuggestions" aria-expanded="false" autocomplete="off" placeholder="輸入一個字搜尋用過的 tag，例如：奇"></label><div id="tagSuggestions" role="listbox" aria-label="相關標籤建議" hidden></div><small>用逗號、頓號或空白分隔；相同 tag 會自動合併。</small><p id="tagHeading" tabindex="-1" style="margin-bottom:0;scroll-margin-top:24px">使用過的 tag（常用優先，括號為收藏數；點選加入／移除）</p><div id="tagChoices" aria-label="使用過的 tag"></div><button type="button" id="toggleTags" class="secondary" hidden>展開其他標籤</button><div id="dropZone" role="button" tabindex="0" aria-label="拖曳或選擇封面圖片"><strong>把封面圖片拖到頁面任意位置</strong><br><small>可從資料夾或網頁拖入，也可以複製圖片後按 Ctrl+V<br>或點此選擇圖片</small></div><label>封面圖片<input id="cover" type="file" accept="image/png,image/jpeg,image/webp,image/gif"></label><img id="preview" hidden alt="封面預覽"><small id="coverHint">新增時請拖入、貼上或選擇一張圖片；編輯時留空會保留原封面。</small><p></p><div class="row"><button id="save" type="submit">儲存至 Obsidian</button><button id="cancel" type="button" class="secondary">清空／取消編輯</button></div></form><p id="status" role="status" aria-live="polite"></p></section>
+<section><details id="tagManager"><summary>管理標籤（新增／改名／刪除）</summary><p>改名會同步更新所有使用此 tag 的漫畫；刪除會從所有漫畫移除該 tag，漫畫與封面會保留。改成已存在的名稱會合併標籤。</p><div class="row"><input id="newTag" placeholder="輸入一個新 tag" aria-label="新標籤" style="flex:1;margin:0"><button id="addTag" type="button">新增標籤</button></div><input id="manageSearch" placeholder="搜尋要修改的 tag" aria-label="搜尋標籤"><p id="manageStatus" role="status"></p><div id="manageList"></div></details></section><section><h2>已收藏漫畫</h2><input id="search" aria-label="搜尋漫畫" placeholder="搜尋名稱或 tag"><div id="list"></div></section><small>所有資料都在本機。拖入網頁圖片時會嘗試下載該圖片；漫畫連結不會自動抓取內容。使用桌面版 Edge 或 Chrome。</small></main><div id="dropFeedback" role="status" aria-live="polite" hidden></div><div id="pageDropHint" hidden>放開滑鼠，將圖片設為封面</div>
+<script>
+const $=id=>document.getElementById(id);
+function urlKey(value){try{const u=new URL(String(value).trim());u.hash='';u.pathname=u.pathname.replace(/\/+$/,'')||'/';u.searchParams.sort();return u.href}catch{return String(value).trim()}}
+function duplicateLink(items,url,exceptId=null){const key=urlKey(url);return items.find(m=>m.id!==exceptId&&urlKey(m.url)===key)}
+function tagsOf(s){return [...new Set(s.normalize('NFC').replace(/\p{Cf}/gu,'').split(/[,，、;；\s]+/).map(x=>x.replace(/^#+/,'').trim()).filter(Boolean))]}
+function plain(s){return String(s).replace(/[\r\n]/g,' ').replace(/[\[\]<>|]/g,'').trim()}
+function link(m){return `[[漫畫收藏工具/筆記/${m.noteName||m.id}|${plain(m.title)}]]`}
+function note(m){return `---\n漫畫收藏工具: true\n名稱: ${JSON.stringify(m.title)}\n來源: ${JSON.stringify(m.url)}\n分類: ${JSON.stringify(m.tags)}\n建立時間: ${JSON.stringify(m.created)}\n更新時間: ${JSON.stringify(m.updated)}\n---\n\n# ${plain(m.title)}\n\n![[漫畫收藏工具/封面/${m.cover}]]\n\n[開啟漫畫連結](<${m.url}>)\n\n## 分類\n\n${m.tags.map(t=>`[[漫畫收藏工具/分類/${m.tagIds[t]}|${plain(t)}]]`).join(' · ')||'未分類'}\n\n[[漫畫收藏工具/漫畫總目錄|回到漫畫總目錄]]\n`}
+let root,db={version:1,items:[],tags:{}},editing=null,previewUrl,selectedCover=null,coverRequest=0,saving=false,tagsExpanded=false;
+function tagCounts(data){const counts=new Map(Object.keys(data.tags).map(t=>[t,0]));for(const m of data.items)for(const t of new Set(m.tags))counts.set(t,(counts.get(t)||0)+1);return counts}
+function sortedTags(data){const counts=tagCounts(data);return Object.keys(data.tags).sort((a,b)=>(counts.get(b)||0)-(counts.get(a)||0)||a.localeCompare(b,'zh-Hant'))}
+function renderTagChoices(){
+ closeTagSuggestions();
+ let box=$('tagChoices'),selected=new Set(tagsOf($('tags').value));box.replaceChildren();
+ let all=sortedTags(db),known=tagsExpanded?all:all.slice(0,30),counts=tagCounts(db);$('toggleTags').hidden=all.length<=30;$('toggleTags').textContent=tagsExpanded?'收合其他標籤':'展開其他 '+Math.max(0,all.length-30)+' 個標籤';$('toggleTags').setAttribute('aria-expanded',String(tagsExpanded));
+ if(!known.length){box.textContent=root?'儲存漫畫後，使用過的 tag 會顯示在這裡。':'連接筆記庫後，這裡會顯示使用過的 tag。';return}
+ for(let t of known){let b=document.createElement('button');b.type='button';b.tagValue=t;b.textContent=t+' ('+(counts.get(t)||0)+')';b.title='已用於 '+(counts.get(t)||0)+' 筆收藏';b.setAttribute('aria-pressed',String(selected.has(t)));b.onclick=()=>{let current=tagsOf($('tags').value);$('tags').value=(current.includes(t)?current.filter(x=>x!==t):[...current,t]).join(', ');renderTagChoices();let replacement=Array.from(box.children).find(x=>x.tagValue===t);replacement?.focus()};box.append(b)}
+}
+
+let tagComposing=false,suggestionItems=[],suggestionActive=-1;
+function tagToken(value,caret=value.length){
+ caret=Number.isInteger(caret)?caret:value.length;let start=caret,end=caret;const separator=c=>/[,，、;；\s]/u.test(c);
+ while(start>0&&!separator(value[start-1]))start--;while(end<value.length&&!separator(value[end]))end++;
+ return {start,end,query:value.slice(start,caret).normalize('NFC').replace(/\p{Cf}/gu,'').replace(/^#+/,'').toLocaleLowerCase(),before:tagsOf(value.slice(0,start)),after:tagsOf(value.slice(end))};
+}
+function tagCandidates(data,value,caret){
+ const token=tagToken(value,caret);if(!token.query)return [];const used=new Set([...token.before,...token.after]);
+ return sortedTags(data).filter(t=>!used.has(t)&&t.toLocaleLowerCase().includes(token.query)).sort((a,b)=>Number(b.toLocaleLowerCase().startsWith(token.query))-Number(a.toLocaleLowerCase().startsWith(token.query))).slice(0,12);
+}
+function closeTagSuggestions(){suggestionItems=[];suggestionActive=-1;$('tagSuggestions').hidden=true;$('tags').setAttribute('aria-expanded','false');$('tags').setAttribute('aria-activedescendant','')}
+function paintSuggestionSelection(){for(let i=0;i<$('tagSuggestions').children.length;i++)$('tagSuggestions').children[i].setAttribute('aria-selected',String(i===suggestionActive));$('tags').setAttribute('aria-activedescendant',suggestionActive>=0?'tagSuggestion'+suggestionActive:'')}
+function selectTagSuggestion(tag){
+ if(saving)return;const input=$('tags'),token=tagToken(input.value,input.selectionStart),before=[...new Set([...token.before,tag])],all=[...new Set([...before,...token.after])];
+ input.value=all.join(', ')+(token.after.length?'':', ');const caret=Math.min(before.join(', ').length+2,input.value.length);
+ renderTagChoices();closeTagSuggestions();input.focus({preventScroll:true});input.setSelectionRange?.(caret,caret);
+}
+function renderTagSuggestions(){
+ if(tagComposing||saving){closeTagSuggestions();return}const input=$('tags');suggestionItems=tagCandidates(db,input.value,input.selectionStart);suggestionActive=-1;
+ const list=$('tagSuggestions');list.replaceChildren();list.hidden=!suggestionItems.length;input.setAttribute('aria-expanded',String(!!suggestionItems.length));input.setAttribute('aria-activedescendant','');const counts=tagCounts(db);
+ suggestionItems.forEach((t,i)=>{const button=document.createElement('button');button.type='button';button.id='tagSuggestion'+i;button.tagValue=t;button.textContent=t+' ('+(counts.get(t)||0)+')';button.setAttribute('role','option');button.setAttribute('aria-selected','false');button.onmousedown=e=>e.preventDefault();button.onclick=()=>selectTagSuggestion(t);list.append(button)});
+}
+$('tags').oncompositionstart=()=>{tagComposing=true;closeTagSuggestions()};
+$('tags').oncompositionend=()=>{tagComposing=false;renderTagChoices();renderTagSuggestions()};
+$('tags').oninput=e=>{if(tagComposing||e?.isComposing)return;renderTagChoices();renderTagSuggestions()};
+$('tags').onfocus=renderTagSuggestions;$('tags').onclick=renderTagSuggestions;
+$('tags').onblur=()=>{closeTagSuggestions()};
+$('tags').onkeydown=e=>{
+ if(tagComposing||e.isComposing||e.keyCode===229)return;
+ if(e.key==='Escape'){e.preventDefault();closeTagSuggestions();return}
+ if(!suggestionItems.length)return;
+ if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();suggestionActive=e.key==='ArrowDown'?(suggestionActive+1)%suggestionItems.length:(suggestionActive<0?suggestionItems.length-1:(suggestionActive-1+suggestionItems.length)%suggestionItems.length);paintSuggestionSelection()}
+ else if(e.key==='Enter'||e.key==='Tab'){e.preventDefault();selectTagSuggestion(suggestionItems[suggestionActive<0?0:suggestionActive])}
+};
+
+$('toggleTags').onclick=()=>{tagsExpanded=!tagsExpanded;renderTagChoices();if(!tagsExpanded){$('tagHeading').focus({preventScroll:true});$('tagHeading').scrollIntoView({behavior:'smooth',block:'start'})}};
+function status(s){$('status').textContent=s}
+async function dir(parent,name){return parent.getDirectoryHandle(name,{create:true})}
+async function write(parent,name,data){validateFilename(name);try{let h=await parent.getFileHandle(name,{create:true});let w=await h.createWritable();try{await w.write(data);await w.close()}catch(e){await w.abort().catch(()=>{});throw e}}catch(e){throw Error('寫入 '+JSON.stringify(name)+'：'+e.message)}}
+
+
+function safeStem(value){
+ let name=String(value).normalize('NFC').replace(/[\p{Cc}\p{Cf}\p{Cs}]/gu,'').replace(/[<>:"/\\|?*\[\]#^~]/g,'_').replace(/^[\s.]+|[\s.]+$/gu,'');
+ name=Array.from(name).slice(0,70).join('').replace(/[\s.]+$/gu,'')||'未命名';
+ if(/^(con|prn|aux|nul|com[0-9¹²³]|lpt[0-9¹²³])(?:\.|$)/i.test(name))name='分類_'+name;
+ return name;
+}
+function categoryFilename(tag,used){let name=safeStem(tag),taken=new Set(used.map(x=>x.normalize('NFC').toLocaleLowerCase())),candidate=name;while(taken.has(candidate.toLocaleLowerCase()))candidate=name+'-'+crypto.randomUUID().slice(0,8);return candidate}
+function validateFilename(name){
+ if(!name||/[/\\<>:"|?*\p{Cc}\p{Cf}\p{Cs}]/u.test(name)||/^[\s~]|[\s.~]$/u.test(name)||/^(con|prn|aux|nul|com[0-9¹²³]|lpt[0-9¹²³])(?:\.|$)/i.test(name))throw Error('不支援的檔名：'+JSON.stringify(name));
+}
+function readableCategories(data){
+ const old=data.tags,next=Object.create(null),used=[];
+ const ordered=Object.keys(old).sort((a,b)=>Number(/\p{Cf}/u.test(a))-Number(/\p{Cf}/u.test(b)));
+ for(const t of ordered){const clean=t.normalize('NFC').replace(/\p{Cf}/gu,'').trim();if(!clean||Object.hasOwn(next,clean))continue;
+  const existing=old[t];const keep=typeof existing==='string'&&safeStem(existing)===existing&&!/^[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}$/i.test(existing)&&!used.some(x=>x.toLocaleLowerCase()===existing.toLocaleLowerCase());
+  next[clean]=keep?existing:categoryFilename(clean,used);used.push(next[clean]);
+ }
+ for(const m of data.items){m.tags=[...new Set(m.tags.map(t=>t.normalize('NFC').replace(/\p{Cf}/gu,'').trim()).filter(Boolean))];for(const t of m.tags)if(!Object.hasOwn(next,t)){next[t]=categoryFilename(t,used);used.push(next[t])}m.tagIds=Object.fromEntries(m.tags.map(t=>[t,next[t]]))}
+ data.tags=next;return data;
+}
+function documents(data){
+ const files=new Map();for(const m of data.items)files.set('筆記/'+(m.noteName||m.id)+'.md',note(m));
+ const allTags=sortedTags(data);
+ const groups=new Map(allTags.map(t=>[t,[]]));for(const m of data.items)for(const t of m.tags)groups.get(t)?.push('- '+link(m));
+ for(const t of allTags)files.set('分類/'+data.tags[t]+'.md','# '+plain(t)+'\n\n'+(groups.get(t).join('\n')||'目前沒有漫畫。')+'\n\n[[漫畫收藏工具/漫畫總目錄|回到漫畫總目錄]]\n');
+ files.set('漫畫總目錄.md','# 漫畫總目錄\n\n共 '+data.items.length+' 部漫畫。\n\n## 分類\n\n'+allTags.map(t=>'- [[漫畫收藏工具/分類/'+data.tags[t]+'|'+plain(t)+']]').join('\n')+'\n\n## 所有漫畫\n\n'+data.items.map(m=>'- '+link(m)).join('\n')+'\n');
+ for(const key of files.keys())for(const part of key.split('/'))validateFilename(part);return files;
+}
+
+async function readDb(folder){try{let f=await (await folder.getFileHandle('收藏資料.json')).getFile();let d=JSON.parse(await f.text());if(d.version!==1||!Array.isArray(d.items)||!d.tags||typeof d.tags!=='object')throw Error('資料格式不支援');return readableCategories(d)}catch(e){if(e.name==='NotFoundError')return {version:1,items:[],tags:{}};throw e}}
+
+async function sync(folder,data,previous=null){
+ const files=documents(data),before=previous?documents(previous):new Map(),folders=new Map();let written=0;
+ for(const [key,body] of files){if(before.get(key)===body)continue;
+  const parts=key.split('/'),name=parts.pop();let target=folder;if(parts.length){if(!folders.has(parts[0]))folders.set(parts[0],await dir(folder,parts[0]));target=folders.get(parts[0])}
+  if(!previous){try{const existing=await target.getFileHandle(name);if(await (await existing.getFile()).text()===body)continue}catch(e){if(e.name!=='NotFoundError')throw Error('讀取 '+key+'：'+e.message)}}
+  status('正在更新 '+key);await write(target,name,body);written++;
+ }return written;
+}
+async function removePending(folder){try{await folder.removeEntry('待完成儲存.json')}catch(e){if(e.name!=='NotFoundError')throw e}}
+async function recoverPending(folder){
+ let pending;try{pending=JSON.parse(await (await folder.getFileHandle('待完成儲存.json')).getFile().then(f=>f.text()))}catch(e){if(e.name==='NotFoundError')return;throw e}
+ if(pending.version!==1||!Array.isArray(pending.items)||!pending.tags)throw Error('待完成資料格式不正確');
+ readableCategories(pending);await sync(folder,pending);const clean={...pending};delete clean._cleanupCategories;await write(folder,'收藏資料.json',JSON.stringify(clean,null,2));await cleanupCategoryFiles(folder,pending);await removePending(folder);
+}
+
+
+function changeTag(data,action,oldName,value){
+ const parsed=tagsOf(value||'');if(action!=='delete'&&parsed.length!==1)throw Error('請輸入一個 tag，不要含空白或分隔符號。');const name=parsed[0];
+ if(action!=='add'&&!Object.hasOwn(data.tags,oldName))throw Error('這個 tag 已不存在，請重新載入。');
+ if(action==='add'&&Object.hasOwn(data.tags,name))throw Error('這個 tag 已經存在。');
+ const oldFiles=Object.values(data.tags);
+ if(action==='add'||action==='rename'&&!Object.hasOwn(data.tags,name))Object.defineProperty(data.tags,name,{value:categoryFilename(name,Object.values(data.tags)),enumerable:true,writable:true,configurable:true});
+ if(action==='rename'&&name===oldName)return [];
+ if(action!=='add'){
+  for(const m of data.items)if(m.tags.includes(oldName)){m.tags=[...new Set(m.tags.flatMap(t=>t===oldName?(action==='delete'?[]:[name]):[t]))];m.updated=new Date().toISOString()}
+  delete data.tags[oldName];
+ }
+ readableCategories(data);return oldFiles.filter(n=>!Object.values(data.tags).includes(n));
+}
+async function cleanupCategoryFiles(folder,data){
+ if(!data._cleanupCategories?.length)return;
+ const active=new Set(Object.values(data.tags)),categories=await dir(folder,'分類');
+ for(const n of data._cleanupCategories){if(active.has(n))continue;validateFilename(n+'.md');try{await categories.removeEntry(n+'.md')}catch(e){if(e.name!=='NotFoundError')throw e}}
+}
+async function manageTag(action,oldName,value){
+ if(saving)return;if(!root){$('manageStatus').textContent='請先選擇筆記庫。';return}
+ saving=true;let busy=Array.from(document.querySelectorAll('button,input'));busy.forEach(b=>b.disabled=true);
+ try{
+  await recoverPending(root);let fresh=await readDb(root),previous=JSON.parse(JSON.stringify(fresh));
+  fresh._cleanupCategories=changeTag(fresh,action,oldName,value);documents(fresh);
+  await write(root,'收藏資料.backup.json',JSON.stringify(previous,null,2));await write(root,'待完成儲存.json',JSON.stringify(fresh,null,2));
+  const written=await sync(root,fresh,previous),clean={...fresh};delete clean._cleanupCategories;
+  await write(root,'收藏資料.json',JSON.stringify(clean,null,2));await cleanupCategoryFiles(root,fresh);await removePending(root);db=clean;
+  if(action!=='add')$('tags').value=[...new Set(tagsOf($('tags').value).flatMap(t=>t===oldName?(action==='delete'?[]:tagsOf(value)):[t]))].join(', ');
+  $('newTag').value='';render();$('manageStatus').textContent='標籤已更新，同步更新 '+written+' 個筆記／分類檔案。';status('標籤管理變更已儲存。');
+ }catch(e){$('manageStatus').textContent='未完成：'+e.message;status('標籤管理未完成：'+e.message)}
+ finally{saving=false;busy.forEach(b=>b.disabled=false)}
+}
+function renderTagManager(){
+ if(!$('tagManager').open)return;const list=$('manageList');list.replaceChildren();const q=$('manageSearch').value.toLocaleLowerCase(),counts=tagCounts(db);
+ for(const t of sortedTags(db).filter(t=>t.toLocaleLowerCase().includes(q))){const row=document.createElement('div');row.className='manageRow';const input=document.createElement('input');input.value=t;input.setAttribute('aria-label','修改標籤 '+t);const count=document.createElement('small');count.textContent=(counts.get(t)||0)+' 筆收藏';const rename=document.createElement('button');rename.textContent='儲存改名';rename.onclick=()=>manageTag('rename',t,input.value);const del=document.createElement('button');del.className='danger';del.textContent='刪除';del.onclick=()=>{if(confirm('刪除標籤「'+t+'」？會從 '+(counts.get(t)||0)+' 筆收藏移除此標籤，漫畫與封面保留。'))manageTag('delete',t)};row.append(input,count,rename,del);list.append(row)}
+ if(!list.children.length)list.textContent='沒有符合的 tag。';
+}
+$('addTag').onclick=()=>manageTag('add',null,$('newTag').value);
+$('newTag').onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();manageTag('add',null,$('newTag').value)}};
+$('tagManager').ontoggle=renderTagManager;$('manageSearch').oninput=renderTagManager;
+
+
+let savedVaultHandle=null,vaultSelectionGeneration=0;
+function vaultSetting(mode,handle){
+ return new Promise((resolve,reject)=>{
+  if(typeof indexedDB==='undefined'){reject(Error('此環境無法保存資料夾設定'));return}
+  const open=indexedDB.open('MangaCollectionSettings',1);
+  open.onupgradeneeded=()=>{if(!open.result.objectStoreNames.contains('settings'))open.result.createObjectStore('settings')};
+  open.onerror=()=>reject(open.error);
+  open.onsuccess=()=>{
+   const connection=open.result;let value;
+   try{const tx=connection.transaction('settings',mode==='save'?'readwrite':'readonly'),store=tx.objectStore('settings'),request=mode==='save'?store.put(handle,'vault'):store.get('vault');
+    request.onsuccess=()=>{value=request.result};tx.oncomplete=()=>{connection.close();resolve(value)};tx.onerror=()=>{connection.close();reject(tx.error)};tx.onabort=()=>{connection.close();reject(tx.error||Error('設定儲存中止'))};
+   }catch(e){connection.close();reject(e)}
+  };
+ });
+}
+async function connectVault(picked){
+ const folder=await dir(picked,'漫畫收藏工具');await recoverPending(folder);const loaded=await readDb(folder);
+ root=folder;db=loaded;savedVaultHandle=picked;$('vault').textContent=picked.name;$('reconnectVault').hidden=true;reset();render();
+ $('vaultRememberHint').textContent='目前筆記庫：'+picked.name+'。可以用「選擇 Obsidian 筆記庫」更換。';
+}
+$('choose').onclick=async()=>{
+ try{if(!window.showDirectoryPicker)throw Error('請使用桌面版 Edge 或 Chrome 開啟此檔案。');vaultSelectionGeneration++;
+  const picked=await showDirectoryPicker({mode:'readwrite'});await connectVault(picked);
+  try{await vaultSetting('save',picked);status('已連接並記住此筆記庫，下次開啟會嘗試自動連接。')}catch(e){status('已連接筆記庫，但無法記住位置：'+e.message)}
+ }catch(e){if(e.name!=='AbortError')status('無法開啟：'+e.message)}
+};
+$('reconnectVault').onclick=async()=>{
+ if(!savedVaultHandle)return;vaultSelectionGeneration++;
+ try{const permission=await savedVaultHandle.requestPermission({mode:'readwrite'});if(permission!=='granted'){status('尚未授權，請允許存取上次的筆記庫，或重新選擇資料夾。');return}await connectVault(savedVaultHandle);status('已重新連接上次的筆記庫。')}
+ catch(e){$('reconnectVault').hidden=false;status('無法重新連接：'+e.message+'。若資料夾已移動，請重新選擇。')}
+};
+async function restoreSavedVault(){
+ const generation=vaultSelectionGeneration;
+ try{const handle=await vaultSetting('load');if(!handle||generation!==vaultSelectionGeneration)return;
+  savedVaultHandle=handle;$('vault').textContent='已記住：'+handle.name;$('reconnectVault').hidden=false;
+  $('vaultRememberHint').textContent='已記住筆記庫「'+handle.name+'」。若需要授權，按「重新連接上次的筆記庫」，不用再找資料夾。';
+  const permission=await handle.queryPermission({mode:'readwrite'});if(generation!==vaultSelectionGeneration)return;
+  if(permission==='granted'){await connectVault(handle);status('已自動連接上次使用的筆記庫。')}
+ }catch(e){if(savedVaultHandle){$('reconnectVault').hidden=false;status('已記住上次的筆記庫；請重新連接，或改選資料夾。')}}
+}
+
+function reset(){coverRequest++;selectedCover=null;$('save').disabled=false;$('coverHint').textContent='新增時請拖入、貼上或選擇一張圖片；編輯時留空會保留原封面。';editing=null;$('form').reset();$('heading').textContent='新增漫畫';$('preview').hidden=true;if(previewUrl)URL.revokeObjectURL(previewUrl);renderTagChoices()}
+$('cancel').onclick=reset;
+
+const imageTypes=['image/png','image/jpeg','image/webp','image/gif'];
+function setCover(file){
+ if(!imageTypes.includes(file.type))throw Error('請使用 PNG、JPEG、WebP 或 GIF 圖片。');
+ if(file.size>20*1024*1024)throw Error('封面請小於 20 MB。');
+ if(previewUrl)URL.revokeObjectURL(previewUrl);
+ selectedCover=file;previewUrl=URL.createObjectURL(file);$('preview').src=previewUrl;$('preview').hidden=false;
+ $('coverHint').textContent='已選擇封面：'+(file.name||'貼上的圖片')+'（按儲存才會寫入筆記庫）';
+}
+function coverError(e){dropFeedback('圖片未加入：'+e.message)}
+$('cover').onchange=()=>{if(saving)return;coverRequest++;$('save').disabled=false;let f=$('cover').files[0];if(f){try{setCover(f)}catch(e){$('cover').value='';coverError(e)}}};
+$('dropZone').onclick=()=>{if(!saving)$('cover').click()};
+$('dropZone').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();if(!saving)$('cover').click()}};
+
+function droppedImageUrl(dt){
+ const get=type=>{try{return dt.getData(type)||''}catch{return ''}};
+ const uri=(get('text/uri-list')||get('text/x-moz-url')||get('text/plain')).split(/\r?\n/).map(x=>x.trim()).find(x=>x&&!x.startsWith('#'));
+ const html=get('text/html');
+ if(html){const doc=new DOMParser().parseFromString(html,'text/html'),img=doc.querySelector('img'),base=doc.querySelector('base')?.getAttribute('href')||uri;
+  if(img){const sources=[img.getAttribute('data-src'),img.getAttribute('data-original'),img.getAttribute('src')];
+   if(!sources.some(Boolean)){const srcset=img.getAttribute('srcset');if(srcset)sources.push(srcset.split(',').pop().trim().split(/\s+/)[0])}
+   for(const src of sources){if(!src)continue;try{const result=base?new URL(src,base).href:new URL(src).href;if(/^(https?:|data:image\/)/i.test(result))return result}catch{}}
+  }
+ }
+ return uri&&/^(https?:|data:image\/)/i.test(uri)?uri:null;
+}
+
+let dropFeedbackTimer;function dropFeedback(message){status(message);$('dropFeedback').textContent=message;$('dropFeedback').hidden=false;clearTimeout(dropFeedbackTimer);dropFeedbackTimer=setTimeout(()=>{$('dropFeedback').hidden=true},14000)}
+async function remoteCover(url,request){
+ try{
+  dropFeedback('已收到圖片，正在讀取網頁封面…');
+  let response=await fetch(url,{credentials:'omit',referrerPolicy:'no-referrer',signal:AbortSignal.timeout(20000)});
+  if(!response.ok)throw Error('網站回應 '+response.status);
+  if(Number(response.headers.get('content-length'))>20*1024*1024)throw Error('封面請小於 20 MB。');
+  let blob=await response.blob();if(request!==coverRequest)return;
+  if(!imageTypes.includes(blob.type))throw Error('拖入的連結不是支援的圖片，請直接拖圖片本身。');
+  setCover(new File([blob],'網頁封面.'+({'image/png':'png','image/jpeg':'jpg','image/webp':'webp','image/gif':'gif'}[blob.type]),{type:blob.type}));
+  dropFeedback('網頁封面已加入！填好資料後按儲存。');
+ }catch(e){if(request===coverRequest)dropFeedback('無法讀取網頁圖片（網站可能禁止跨網站讀取）。請在原圖片上按右鍵「複製圖片」，再回到本程式按 Ctrl+V。也可以拖入本機圖片。\n'+e.message)}
+ finally{if(request===coverRequest)$('save').disabled=false}
+}
+for(let event of ['dragenter','dragover'])$('dropZone').addEventListener(event,e=>{e.preventDefault();if(!saving){$('dropZone').classList.add('dragging');if(e.dataTransfer)e.dataTransfer.dropEffect='copy'}});
+$('dropZone').addEventListener('dragleave',()=>{$('dropZone').classList.remove('dragging')});
+async function acceptImageDrop(e){
+ hideDropHint();e.preventDefault();$('dropZone').classList.remove('dragging');if(saving){dropFeedback('正在儲存資料，請完成後再拖入圖片。');return}dropFeedback('已收到拖放，正在辨識圖片…');
+ const request=++coverRequest;$('save').disabled=false;const dt=e.dataTransfer;if(!dt){dropFeedback('未收到圖片資料，請在原圖上按右鍵「複製圖片」，再回程式按 Ctrl+V。');return}const files=Array.from(dt.files||[]);if(!files.length)for(const item of Array.from(dt.items||[])){if(item.kind==='file'){const file=item.getAsFile();if(file)files.push(file)}}
+ if(files.length){try{setCover(files.find(f=>imageTypes.includes(f.type))||files[0]);dropFeedback('封面已加入，填好資料後按儲存。')}catch(err){coverError(err)}return}
+ let url=droppedImageUrl(dt);if(!url){dropFeedback('這次拖入的內容沒有可讀取的圖片網址。請在網頁原圖上按右鍵「複製圖片」，再回到程式按 Ctrl+V。');return}
+ $('save').disabled=true;await remoteCover(url,request);
+}
+$('dropZone').addEventListener('drop',e=>{e.stopPropagation?.();return acceptImageDrop(e)});
+
+function looksLikeImageDrag(e){const types=Array.from(e.dataTransfer?.types||[]);return types.includes('Files')||types.includes('text/html')||types.includes('text/uri-list')}
+let pageDragDepth=0;
+function hideDropHint(){pageDragDepth=0;$('pageDropHint').hidden=true}
+document.addEventListener('dragenter',e=>{e.preventDefault();if(saving||!looksLikeImageDrag(e))return;pageDragDepth++;$('pageDropHint').hidden=false});
+document.addEventListener('dragover',e=>{e.preventDefault();if(!saving&&e.dataTransfer)e.dataTransfer.dropEffect='copy'},true);
+document.addEventListener('dragleave',e=>{pageDragDepth=Math.max(0,pageDragDepth-1);if(!pageDragDepth||!e.relatedTarget)$('pageDropHint').hidden=true});
+document.addEventListener('dragend',hideDropHint);
+document.addEventListener('drop',e=>{e.preventDefault();e.stopPropagation?.();e.stopImmediatePropagation?.();hideDropHint();return acceptImageDrop(e)},true);
+
+document.addEventListener('paste',e=>{
+ if(saving)return;let item=Array.from(e.clipboardData?.items||[]).find(x=>x.kind==='file'&&imageTypes.includes(x.type));if(!item)return;
+ e.preventDefault();coverRequest++;try{setCover(item.getAsFile());$('save').disabled=false;dropFeedback('貼上的封面已加入，填好資料後按儲存。')}catch(err){coverError(err)}
+});
+
+function render(){renderTagChoices();renderTagManager();let box=$('list');box.replaceChildren();let q=$('search').value.toLocaleLowerCase();for(let m of db.items.filter(m=>(m.title+' '+m.tags.join(' ')).toLocaleLowerCase().includes(q))){let c=document.createElement('div');c.className='card';let h=document.createElement('h3');h.textContent=m.title;let p=document.createElement('small');p.textContent=m.tags.join(' · ')||'未分類';let b=document.createElement('button');b.textContent='編輯';b.onclick=()=>{reset();editing=m.id;$('heading').textContent='編輯漫畫';$('title').value=m.title;$('url').value=m.url;$('tags').value=m.tags.join(', ');renderTagChoices();$('form').scrollIntoView({behavior:'smooth'})};c.append(h,p,document.createElement('br'),b);box.append(c)}if(!box.children.length)box.textContent='尚無符合的漫畫。'}
+$('search').oninput=render;
+$('form').onsubmit=async e=>{e.preventDefault();if(saving)return;if(!root){status('請先選擇 Obsidian 筆記庫。');return}saving=true;let busy=Array.from(document.querySelectorAll('button,input'));busy.forEach(b=>b.disabled=true);try{await recoverPending(root);let fresh=await readDb(root);let previous=JSON.parse(JSON.stringify(fresh));let old=editing?fresh.items.find(m=>m.id===editing):null;if(editing&&!old)throw Error('這筆資料已不存在，請重新選擇筆記庫。');let title=$('title').value.trim();if(!title)throw Error('請填寫漫畫名稱。');let u=new URL($('url').value.trim());if(!['https:','http:'].includes(u.protocol))throw Error('連結必須使用 http 或 https。');let duplicate=duplicateLink(fresh.items,u.href,old?.id);if(duplicate){let error=Error('此連結已收藏於「'+duplicate.title+'」，無法重複新增。請在收藏清單點選「編輯」修改原紀錄。');error.code='DUPLICATE_LINK';throw error}let file=selectedCover||$('cover').files[0];if(!old&&!file)throw Error('請選擇封面圖片。');let exts={'image/png':'png','image/jpeg':'jpg','image/webp':'webp','image/gif':'gif'};if(file&&!exts[file.type])throw Error('封面請使用 PNG、JPEG、WebP 或 GIF。');if(file&&file.size>20*1024*1024)throw Error('封面請小於 20 MB。');let id=old?.id||crypto.randomUUID(),ts=new Date().toISOString(),tags=tagsOf($('tags').value);for(let t of tags)if(!Object.hasOwn(fresh.tags,t))Object.defineProperty(fresh.tags,t,{value:categoryFilename(t,Object.values(fresh.tags)),enumerable:true,writable:true,configurable:true});let noteName=old?.title===title&&old?.noteName?old.noteName:categoryFilename(title,fresh.items.filter(x=>x.id!==id).map(x=>x.noteName||x.id));let m={id,noteName,title,url:u.href,tags,tagIds:Object.fromEntries(tags.map(t=>[t,fresh.tags[t]])),cover:old?.cover,created:old?.created||ts,updated:ts};if(file){m.cover=categoryFilename(title,fresh.items.filter(x=>x.id!==id).map(x=>x.cover.replace(/\.[^.]+$/,'')))+'.'+exts[file.type];if(old&&m.cover===old.cover)m.cover=categoryFilename(title,[...fresh.items.map(x=>x.cover.replace(/\.[^.]+$/,''))])+'.'+exts[file.type];validateFilename(m.cover);validateFilename(m.noteName+'.md');await write(await dir(root,'封面'),m.cover,file)}if(!file&&old&&old.title!==title){let covers=await dir(root,'封面');let previousCover=await (await covers.getFileHandle(old.cover)).getFile();let ext=old.cover.split('.').pop();m.cover=categoryFilename(title,fresh.items.map(x=>x.cover.replace(/\.[^.]+$/,'')))+'.'+ext;validateFilename(m.cover);await write(covers,m.cover,previousCover)}if(old)fresh.items[fresh.items.findIndex(x=>x.id===id)]=m;else fresh.items.push(m);documents(fresh);await write(root,'收藏資料.backup.json',JSON.stringify(previous,null,2));await write(root,'待完成儲存.json',JSON.stringify(fresh,null,2));let written=await sync(root,fresh,previous);await write(root,'收藏資料.json',JSON.stringify(fresh,null,2));await removePending(root);db=fresh;if(old&&(old.noteName||old.id)!==m.noteName){let previous=await dir(root,'筆記');try{await previous.removeEntry((old.noteName||old.id)+'.md')}catch(e){if(e.name!=='NotFoundError')throw e}}reset();render();status('已儲存！本次更新 '+written+' 個筆記／分類檔案。在 Obsidian 開啟「漫畫收藏工具／漫畫總目錄」即可瀏覽。')}catch(e){if(e.code==='DUPLICATE_LINK'){status('連結重複：'+e.message);return}status('儲存未完成：'+e.message+'\n請保留目前輸入，重新選擇筆記庫；程式會自動接續已記錄的未完成儲存，避免重複新增。')}finally{saving=false;busy.forEach(b=>b.disabled=false)}};
+render();
+restoreSavedVault();
+</script></html>
