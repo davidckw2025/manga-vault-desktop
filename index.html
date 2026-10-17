@@ -94,7 +94,7 @@ function documents(data){
  const allTags=sortedTags(data);
  const groups=new Map(allTags.map(t=>[t,[]]));for(const m of data.items)for(const t of m.tags)groups.get(t)?.push('- '+link(m));
  for(const t of allTags)files.set('分類/'+data.tags[t]+'.md','# '+plain(t)+'\n\n'+(groups.get(t).join('\n')||'目前沒有漫畫。')+'\n\n[[漫畫收藏工具/漫畫總目錄|回到漫畫總目錄]]\n');
- files.set('漫畫總目錄.md','# 漫畫總目錄\n\n共 '+data.items.length+' 部漫畫。\n\n## 分類\n\n'+allTags.map(t=>'- [[漫畫收藏工具/分類/'+data.tags[t]+'|'+plain(t)+']]').join('\n')+'\n\n## 所有漫畫\n\n'+data.items.map(m=>'- '+link(m)).join('\n')+'\n');
+ files.set('漫畫總目錄.md','# 漫畫總目錄\n\n共 '+data.items.length+' 部漫畫。\n\n## 所有漫畫\n\n'+data.items.map(m=>'- '+link(m)).join('\n')+'\n\n## 分類\n\n'+allTags.map(t=>'- [[漫畫收藏工具/分類/'+data.tags[t]+'|'+plain(t)+']]').join('\n')+'\n');
  for(const key of files.keys())for(const part of key.split('/'))validateFilename(part);return files;
 }
 
