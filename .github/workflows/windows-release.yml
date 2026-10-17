@@ -1,0 +1,29 @@
+name: Build Windows release
+on:
+  push:
+    branches: [main]
+    paths: [index.html, ComicLauncher.cs, build.ps1, app.ico.base64, .github/workflows/windows-release.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile and validate embedded interface
+        shell: pwsh
+        run: ./build.ps1
+      - name: Publish v2.6.0
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view v2.6.0 --repo "$env:GITHUB_REPOSITORY" 2>$null
+          if ($LASTEXITCODE -eq 0) {
+            gh release upload v2.6.0 dist/MangaVault.exe --repo "$env:GITHUB_REPOSITORY" --clobber
+            if ($LASTEXITCODE -ne 0) { throw 'Release upload failed.' }
+            exit 0
+          }
+          gh release create v2.6.0 dist/MangaVault.exe --repo "$env:GITHUB_REPOSITORY" --target main --title "Manga Vault 2.6" --notes "Windows manga library for Obsidian. Download MangaVault.exe and choose your own vault. Requires Microsoft Edge or Google Chrome."
+          if ($LASTEXITCODE -ne 0) { throw 'Release creation failed.' }
