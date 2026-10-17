@@ -1,0 +1,9 @@
+dist/
+work/
+*.user
+*.suo
+.vs/
+.obsidian/
+收藏資料*.json
+待完成儲存.json
+修復前備份/
